@@ -43,7 +43,7 @@ $ cd GebSpockInTen
 
 ## 4. Add Geb and Spock Dependencies
 
-Edit grails-app/conf/BuildConfig.groovy.
+Edit `grails-app/conf/BuildConfig.groovy`.
 
 Insert into dependencies {} block:
 ```
@@ -63,3 +63,23 @@ Insert into plugins {} block:
             exclude 'spock-grails-support'
         }
 ```
+
+## 5. Install Firefox
+
+Download and install from http://www.mozilla.org . I'm using version 19.0.2.
+
+## 6. Make a Geb Config file
+
+Create a `test/functional` folder.
+
+Create a new file `test/functional/GebConfig.groovy` with the following in it:
+```
+import org.openqa.selenium.firefox.FirefoxDriver
+
+driver = { new FirefoxDriver() }
+```
+
+This tells Geb we're going to use Firefox.  It's here you can tell it to use
+Chrome, Safari, IE, etc. too -- or switch them using command line settings
+(note that you will need to add the appropriate selenium dependencies into the
+BuildConfig too if you do that).

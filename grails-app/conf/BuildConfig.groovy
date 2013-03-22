@@ -42,6 +42,14 @@ grails.project.dependency.resolution = {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes e.g.
 
         // runtime 'mysql:mysql-connector-java:5.1.22'
+
+        // Geb functional test requirements
+        test 'org.gebish:geb-spock:0.9.0-RC-1'
+        test 'org.seleniumhq.selenium:selenium-support:2.31.0'
+        test('org.seleniumhq.selenium:selenium-firefox-driver:2.31.0') {
+            exclude: 'xml-apis'
+        }
+        test 'org.spockframework:spock-grails-support:0.7-groovy-2.0'
     }
 
     plugins {
@@ -59,5 +67,11 @@ grails.project.dependency.resolution = {
         runtime ":database-migration:1.3.2"
 
         compile ':cache:1.0.1'
+
+        // Required to build functional tests
+        test ':geb:0.9.0-RC-1'
+        test(':spock:0.7') {
+            exclude 'spock-grails-support'
+        }
     }
 }

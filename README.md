@@ -40,3 +40,26 @@ $ export PATH="$PATH:$GRAILS_HOME/bin"
 $ grails create-app GebSpockInTen
 $ cd GebSpockInTen
 ```
+
+## 4. Add Geb and Spock Dependencies
+
+Edit grails-app/conf/BuildConfig.groovy.
+
+Insert into dependencies {} block:
+```
+        // Geb functional test requirements
+        test 'org.gebish:geb-spock:0.9.0-RC-1'
+        test 'org.seleniumhq.selenium:selenium-support:2.31.0'
+        test('org.seleniumhq.selenium:selenium-firefox-driver:2.31.0') {
+            exclude: 'xml-apis'
+        }
+        test 'org.spockframework:spock-grails-support:0.7-groovy-2.0'
+```
+Insert into plugins {} block:
+```
+        // Required to build functional tests
+        test ':geb:0.9.0-RC-1'
+        test(':spock:0.7') {
+            exclude 'spock-grails-support'
+        }
+```

@@ -159,3 +159,15 @@ debugging tests won't get swallowed.
 
 The output will be in `target/test-reports`.  There is an `html` report and the
 screenshots taken at the end of each test (success or failure) are under `geb`.
+
+# Now what?
+
+You're good to go!  Start by experimenting with adding new things to the page
+object and then using them and checking them in the spec test.
+
+This repo has a slightly more complicated example of testing the Google
+calculator in `test/functional` if you need some inspiration.
+
+I really recommend reading the documentation:
+   * The Book of Geb - http://www.gebish.org/manual/0.7.2/
+   * Spock Basics - http://code.google.com/p/spock/wiki/SpockBasics

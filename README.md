@@ -83,3 +83,29 @@ This tells Geb we're going to use Firefox.  It's here you can tell it to use
 Chrome, Safari, IE, etc. too -- or switch them using command line settings
 (note that you will need to add the appropriate selenium dependencies into the
 BuildConfig too if you do that).
+
+## 7. Create a simple Geb Page definition
+
+Create new file `test/functional/GoogleHomePage.groovy` with:
+```
+import geb.Page
+
+class GoogleHomePage extends Page {
+	static url = '/'
+	
+	static at = {
+		title == 'Google'
+	}
+
+	static content = {
+		searchBox { $('input[type="text"]', name:'q') }
+		searchButton { $('button', text:contains('Google Search')) }
+	}
+}
+```
+
+This is using a site relative URL, with a check for the title of the page and
+defining the search box and search button using Geb's jQuery-like syntax.  Note
+how it supports matching on the attributes to the tag (name) and the tags text
+context (text) using both exact and inexact matches (contains).
+

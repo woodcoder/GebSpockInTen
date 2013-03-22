@@ -109,3 +109,23 @@ defining the search box and search button using Geb's jQuery-like syntax.  Note
 how it supports matching on the attributes to the tag (name) and the tags text
 context (text) using both exact and inexact matches (contains).
 
+## 8. Create a simple Spock Specification
+
+Create another new file `test/functional/MyFirstTestSpec.groovy` with:
+```
+import geb.spock.GebReportingSpec
+import spock.lang.*
+
+class MyFirstTestSpec extends GebReportingSpec {
+	def 'test Google is up'() {
+		when:
+			to GoogleHomePage
+		then:
+			at GoogleHomePage
+	}
+}
+```
+
+This should just take us to the Google home page and check it's loaded (by
+looking at the title, and ensuring all require content is found) as defined by
+the page object.

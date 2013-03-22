@@ -154,3 +154,8 @@ either (again, we don't have any anyway).
 
 `-echoOut` just means that any `println`s we've added to the code for
 debugging tests won't get swallowed.
+
+## 10. Check the results
+
+The output will be in `target/test-reports`.  There is an `html` report and the
+screenshots taken at the end of each test (success or failure) are under `geb`.

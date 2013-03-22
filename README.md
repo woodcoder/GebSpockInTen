@@ -129,3 +129,28 @@ class MyFirstTestSpec extends GebReportingSpec {
 This should just take us to the Google home page and check it's loaded (by
 looking at the title, and ensuring all require content is found) as defined by
 the page object.
+
+## 9. Give it a whirl!
+
+Test it out, with the following command:
+
+Windows
+```
+> grails test-app -echoOut functional: "-baseUrl=http://www.google.co.uk"
+```
+Mac/Linux
+```
+$ grails test-app -echoOut functional: -baseUrl=http://www.google.co.uk
+```
+
+It will take a while to get everything downloaded to start with, but be
+patient!
+
+The `-baseUrl` parameter tells grails not to start up its own server (which,
+for us, will do nothing anyway) but just to connect to a remote site.
+
+The `functional:` parameter means that grails won't try to run any unit tests
+either (again, we don't have any anyway).
+
+`-echoOut` just means that any `println`s we've added to the code for
+debugging tests won't get swallowed.

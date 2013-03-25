@@ -28,14 +28,14 @@ Download version 2.2.1 from http://grails.org and unzip somewhere suitable.
 
 Windows
 ```
-> SET GRAILS_HOME=C:\springsource\grails-2.2.1
+> SET GRAILS_HOME=C:\[path-to-where-you-put-grails]\grails-2.2.1
 > SET PATH=%PATH%;%GRAILS_HOME%\bin
 > grails create-app GebSpockInTen
 > cd GebSpockInTen
 ```
 Mac/Linux
 ```
-$ export GRAILS_HOME=/Users/username/springsource/grails-2.2.1
+$ export GRAILS_HOME=/Users/[your-username]/[path-to-where-you-put-grails]/grails-2.2.1
 $ export PATH="$PATH:$GRAILS_HOME/bin"
 $ grails create-app GebSpockInTen
 $ cd GebSpockInTen

@@ -44,7 +44,7 @@ grails.project.dependency.resolution = {
         // runtime 'mysql:mysql-connector-java:5.1.22'
 
         // Geb functional test requirements
-        test 'org.gebish:geb-spock:0.9.0-RC-1'
+        test 'org.gebish:geb-spock:0.9.1'
         test 'org.seleniumhq.selenium:selenium-support:2.31.0'
         test('org.seleniumhq.selenium:selenium-firefox-driver:2.31.0') {
             exclude: 'xml-apis'
@@ -69,7 +69,7 @@ grails.project.dependency.resolution = {
         compile ':cache:1.0.1'
 
         // Required to build functional tests
-        test ':geb:0.9.0-RC-1'
+        test ':geb:0.9.1'
         test(':spock:0.7') {
             exclude 'spock-grails-support'
         }

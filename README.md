@@ -48,7 +48,7 @@ Edit `grails-app/conf/BuildConfig.groovy`.
 Insert into dependencies {} block:
 ```
         // Geb functional test requirements
-        test 'org.gebish:geb-spock:0.9.0-RC-1'
+        test 'org.gebish:geb-spock:0.9.1'
         test 'org.seleniumhq.selenium:selenium-support:2.31.0'
         test('org.seleniumhq.selenium:selenium-firefox-driver:2.31.0') {
             exclude: 'xml-apis'
@@ -58,7 +58,7 @@ Insert into dependencies {} block:
 Insert into plugins {} block:
 ```
         // Required to build functional tests
-        test ':geb:0.9.0-RC-1'
+        test ':geb:0.9.1'
         test(':spock:0.7') {
             exclude 'spock-grails-support'
         }

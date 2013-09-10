@@ -169,5 +169,5 @@ This repo has a slightly more complicated example of testing the Google
 calculator in `test/functional` if you need some inspiration.
 
 I really recommend reading the documentation:
-   * The Book of Geb - http://www.gebish.org/manual/0.7.2/
+   * The Book of Geb - http://www.gebish.org/manual/0.9.1/
    * Spock Basics - http://code.google.com/p/spock/wiki/SpockBasics

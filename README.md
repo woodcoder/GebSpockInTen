@@ -49,8 +49,8 @@ Insert into dependencies {} block:
 ```
         // Geb functional test requirements
         test 'org.gebish:geb-spock:0.9.1'
-        test 'org.seleniumhq.selenium:selenium-support:2.31.0'
-        test('org.seleniumhq.selenium:selenium-firefox-driver:2.31.0') {
+        test 'org.seleniumhq.selenium:selenium-support:2.35.0'
+        test('org.seleniumhq.selenium:selenium-firefox-driver:2.35.0') {
             exclude: 'xml-apis'
         }
         test 'org.spockframework:spock-grails-support:0.7-groovy-2.0'
@@ -66,7 +66,7 @@ Insert into plugins {} block:
 
 ## 5. Install Firefox
 
-Download and install from http://www.mozilla.org . I'm using version 19.0.2.
+Download and install from http://www.mozilla.org . I'm using version 23.0.1.
 
 ## 6. Make a Geb Config file
 

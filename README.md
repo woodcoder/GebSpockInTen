@@ -22,20 +22,20 @@ $ export PATH= "$PATH:$JAVA_HOME/bin"
 
 ## 2. Download Grails
 
-Download version 2.2.1 from http://grails.org and unzip somewhere suitable.
+Download version 2.2.4 from http://grails.org and unzip somewhere suitable.
 
 ## 3. Set up and create Grails Project
 
 Windows
 ```
-> SET GRAILS_HOME=C:\springsource\grails-2.2.1
+> SET GRAILS_HOME=C:\springsource\grails-2.2.4
 > SET PATH=%PATH%;%GRAILS_HOME%\bin
 > grails create-app GebSpockInTen
 > cd GebSpockInTen
 ```
 Mac/Linux
 ```
-$ export GRAILS_HOME=/Users/username/springsource/grails-2.2.1
+$ export GRAILS_HOME=/Users/username/springsource/grails-2.2.4
 $ export PATH="$PATH:$GRAILS_HOME/bin"
 $ grails create-app GebSpockInTen
 $ cd GebSpockInTen

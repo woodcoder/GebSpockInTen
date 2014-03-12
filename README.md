@@ -22,20 +22,20 @@ $ export PATH= "$PATH:$JAVA_HOME/bin"
 
 ## 2. Download Grails
 
-Download version 2.2.4 from http://grails.org and unzip somewhere suitable.
+Download version 2.3.7 from http://grails.org and unzip somewhere suitable.
 
 ## 3. Set up and create Grails Project
 
 Windows
 ```
-> SET GRAILS_HOME=C:\[path-to-where-you-put-grails]\grails-2.2.4
+> SET GRAILS_HOME=C:\[path-to-where-you-put-grails]\grails-2.3.7
 > SET PATH=%PATH%;%GRAILS_HOME%\bin
 > grails create-app GebSpockInTen
 > cd GebSpockInTen
 ```
 Mac/Linux
 ```
-$ export GRAILS_HOME=/Users/[your-username]/[path-to-where-you-put-grails]/grails-2.2.4
+$ export GRAILS_HOME=/Users/[your-username]/[path-to-where-you-put-grails]/grails-2.3.7
 $ export PATH="$PATH:$GRAILS_HOME/bin"
 $ grails create-app GebSpockInTen
 $ cd GebSpockInTen
@@ -49,8 +49,8 @@ Insert into dependencies {} block:
 ```
         // Geb functional test requirements
         test 'org.gebish:geb-spock:0.9.1'
-        test 'org.seleniumhq.selenium:selenium-support:2.35.0'
-        test('org.seleniumhq.selenium:selenium-firefox-driver:2.35.0') {
+        test 'org.seleniumhq.selenium:selenium-support:2.40.0'
+        test('org.seleniumhq.selenium:selenium-firefox-driver:2.40.0') {
             exclude: 'xml-apis'
         }
         test 'org.spockframework:spock-grails-support:0.7-groovy-2.0'
@@ -58,7 +58,7 @@ Insert into dependencies {} block:
 Insert into plugins {} block:
 ```
         // Required to build functional tests
-        test ':geb:0.9.1'
+        test ':geb:0.9.2'
         test(':spock:0.7') {
             exclude 'spock-grails-support'
         }
@@ -66,7 +66,7 @@ Insert into plugins {} block:
 
 ## 5. Install Firefox
 
-Download and install from http://www.mozilla.org . I'm using version 23.0.1.
+Download and install from http://www.mozilla.org . I'm using version 27.0.1.
 
 ## 6. Make a Geb Config file
 
@@ -169,5 +169,5 @@ This repo has a slightly more complicated example of testing the Google
 calculator in `test/functional` if you need some inspiration.
 
 I really recommend reading the documentation:
-   * The Book of Geb - http://www.gebish.org/manual/0.9.1/
+   * The Book of Geb - http://www.gebish.org/manual/0.9.2/
    * Spock Basics - http://code.google.com/p/spock/wiki/SpockBasics
